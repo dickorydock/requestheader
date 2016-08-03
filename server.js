@@ -38,7 +38,7 @@ app.get('/:name', function(req,res){
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
 
-	res.send("what");
+	res.send(Object.getOwnPropertyNames(req));
 })
 
 app.listen(process.env.PORT, function(){
