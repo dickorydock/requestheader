@@ -11,6 +11,7 @@ app.get('/', function(req, res){
     res.send(jsonoutput);
 })
 app.get('/:name', function(req,res){
+    console.log(req);
 	//if it's not a valid name, then return null
     ///check if it's an integer aka unixtime
     arg = req.params.name;
