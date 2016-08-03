@@ -37,10 +37,10 @@ app.get('/:name', function(req,res){
 			         unix: parseInt(momentDate.format('X')),
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
-    console.log(req);
-    console.log("donezo");
+    console.log("donezone");
 	// res.send(Object.getOwnPropertyNames(req));
-    res.send(req.headers.host)
+    console.log(req.headers);
+    res.send(Object.getOwnPropertyNames(req.headers));
 })
 
 app.listen(process.env.PORT, function(){
