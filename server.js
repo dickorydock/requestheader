@@ -42,8 +42,9 @@ app.get('/:name', function(req,res){
     console.log(req.headers);
     jsonoutput = JSON.stringify({
                  // ip: req.headers["x-forwarded-for"],
-                 ip: req.headers["accept-language"],
-                 system: "typehere" });
+                 ipaddress: req.headers["x-forwarded-for"],
+                 language: req.headers["accept-language"].split(",")[0],
+                 software: "typehere" });
     res.send(jsonoutput);
 })
 
