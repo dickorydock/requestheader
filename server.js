@@ -40,7 +40,7 @@ app.get('/:name', function(req,res){
     console.log(req);
     console.log("donezo");
 	// res.send(Object.getOwnPropertyNames(req));
-    res.send(JSON.stringify(req))
+    res.send(req.headers.host)
 })
 
 app.listen(process.env.PORT, function(){
