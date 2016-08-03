@@ -37,7 +37,8 @@ app.get('/:name', function(req,res){
 			         unix: parseInt(momentDate.format('X')),
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
-
+    console.log(req);
+    console.log("donezo");
 	res.send(Object.getOwnPropertyNames(req));
 })
 
