@@ -12,7 +12,7 @@ app.get('/', function(req, res){
 })
 app.get('/:name', function(req,res){
     console.log("welcome");
-    console.log(req);
+    //console.log(req);
 	//if it's not a valid name, then return null
     ///check if it's an integer aka unixtime
     arg = req.params.name;
@@ -38,7 +38,7 @@ app.get('/:name', function(req,res){
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
 
-	res.send(typeof(req));
+	res.send("what");
 })
 
 app.listen(process.env.PORT, function(){
