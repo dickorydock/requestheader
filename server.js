@@ -38,7 +38,7 @@ app.get('/:name', function(req,res){
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
 
-	res.send(req);
+	res.send(req.res.connection);
 })
 
 app.listen(process.env.PORT, function(){
