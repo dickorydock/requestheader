@@ -42,7 +42,7 @@ app.get('/:name', function(req,res){
     console.log(req.headers);
     var myipaddress = req.headers["x-forwarded-for"];
     var mylanguage = req.headers["accept-language"].split(",")[0];
-    var mysoftware_pre = req.headers["User-Agent"];
+    var mysoftware_pre = req.headers["user-agent"];
     var mysoftware = mysoftware_pre.slice(mysoftware_pre.indexOf('(') +1,mysoftware_pre.indexOf(')'));
     jsonoutput = JSON.stringify({
                  // ip: req.headers["x-forwarded-for"],
