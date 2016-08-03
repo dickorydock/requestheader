@@ -40,7 +40,11 @@ app.get('/:name', function(req,res){
     console.log("donezone");
 	// res.send(Object.getOwnPropertyNames(req.headers));
     console.log(req.headers);
-    res.send((req.headers["x-forwarded-for"]));
+    jsonoutput = JSON.stringify({
+                 // ip: req.headers["x-forwarded-for"],
+                 ip: req.headers["accept-language"],
+                 system: "typehere" });
+    res.send(jsonoutput);
 })
 
 app.listen(process.env.PORT, function(){
