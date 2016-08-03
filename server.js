@@ -38,7 +38,7 @@ app.get('/:name', function(req,res){
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
 
-	res.send("hip "+jsonoutput);
+	res.send(req);
 })
 
 app.listen(process.env.PORT, function(){
