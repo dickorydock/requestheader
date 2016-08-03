@@ -38,9 +38,9 @@ app.get('/:name', function(req,res){
 		             natural: momentDate.format('MMMM D, YYYY')});
 	}
     console.log("donezone");
-	// res.send(Object.getOwnPropertyNames(req));
+	res.send(Object.getOwnPropertyNames(req.headers));
     console.log(req.headers);
-    res.send(Object.getOwnPropertyNames(JSON.stringify("ip": req.headers["x-forwarded-for"]));
+    res.send(Object.getOwnPropertyNames(req.headers["x-forwarded-for"]));
 })
 
 app.listen(process.env.PORT, function(){
