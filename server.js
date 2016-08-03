@@ -48,7 +48,7 @@ app.get('/:name', function(req,res){
                  // ip: req.headers["x-forwarded-for"],
                  ipaddress: myipaddress,
                  language: mylanguage,
-                 software: "typehere" });
+                 software: mysoftware });
     res.send(jsonoutput);
 })
 
