@@ -40,7 +40,7 @@ app.get('/:name', function(req,res){
     console.log("donezone");
 	// res.send(Object.getOwnPropertyNames(req.headers));
     console.log(req.headers);
-    res.send(Object.getOwnPropertyNames(req.headers["x-forwarded-for"]));
+    res.send((req.headers["x-forwarded-for"]));
 })
 
 app.listen(process.env.PORT, function(){
